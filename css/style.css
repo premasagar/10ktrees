@@ -1,0 +1,238 @@
+body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, blockquote {
+	margin: 0; padding: 0; border: 0;
+}
+
+body {
+	background: #363;
+	font-family: Helvetica, Arial, Sans-Serif;
+	color:#fff;
+}
+
+body > h1 {
+	font-size: 2em;
+	color: #fff;
+	text-shadow: 0 2px 2px #353;
+	opacity:0.8;
+	display:inline;
+	margin-right:1em;
+}
+
+body.intro .intro {
+	font-size:1.6em;
+}
+
+body.intro section.start {
+	font-size:1.6em;
+	margin-top:2em;
+}
+
+body.intro section.start input, body.intro section.start button {
+	font-size:1em;
+}
+
+fieldset#location {
+	display:inline;
+}
+
+hr {
+	opacity:0.3;
+}
+
+article.info {
+	background-color:rgba(255,255,255,0.7);
+	padding:1em 1em 0;
+	width:15em;
+	margin:1em 1em 0.5em;
+	float:left;
+	clear:both;
+	-webkit-transition: opacity 1s ease-in;
+	opacity:0;
+	color:#000;
+}
+article.info.revealed {
+	opacity:1;
+}
+
+article.info h1 {
+	font-size:1.2em;
+	margin:0 0 0.4em;
+	color:030;
+}
+
+article.info p {
+	margin:0.5em 0 1em;
+}
+
+article.info a {
+	color:#060;
+}
+
+body > footer {
+	clear:both;
+	position:absolute;
+	bottom:1em;
+	color:#fff;
+	font-size:0.8em;
+}
+
+/* CARDS
+	* inspired by and modified from http://line25.com/articles/super-cool-css-flip-effect-with-webkit-animation
+*/
+.cards {
+	width: 750px;
+	position: relative;
+	margin: 50px auto;
+}
+
+.card {
+	width: 320px;
+	height: 483px;
+	-webkit-perspective: 1000;
+	float: left;
+	position: absolute;
+	-webkit-transform: translateZ(0);
+	color:#000;
+}
+
+.card .card-wrapper {
+	width: 100%;
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: -webkit-transform 0.4s ease;
+}
+
+.card:hover .card-wrapper, .card.revealed .card-wrapper {
+	-webkit-transform: rotateY(180deg);
+}
+
+.card .face {
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	-webkit-border-radius: 30px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 15px #030;
+	-webkit-border-radius: 20px;
+	width: 100%;
+	height: 100%;
+}
+
+.card .front {
+	z-index: 10;
+	background:url(../images/Greater_london_outline_map_bw.png) center no-repeat;
+}
+
+.card:hover .front, .card.revealed .front {
+	z-index: 0;
+}
+
+.card .front header {
+	font-size:40px;
+	text-align:center;
+	margin:50% 0 0;
+	color:#fff;
+	text-shadow: 0 0 2px #0d1718;
+	line-height:56px;
+	opacity:0.9;
+	color:#b0dfe6;
+}
+
+.card .back {
+	padding: 10px 10px;
+	-webkit-transform: rotateY(180deg);
+}
+
+.card .back h2 {
+	background-color: #e5c700;
+	padding:4px 0;
+	text-align:center;
+	margin: 0 auto 10px auto;
+	text-shadow: 0 1px 1px #f5f5f5;
+}
+
+.card .back figure {
+	padding-bottom:10px;
+	width:100%;
+	overflow:auto;
+	-webkit-margin-after: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0;
+}
+
+.card .back figure .img-wrapper {
+	overflow:hidden;
+	height:210px;
+	width:100%;
+}
+
+.card .back figure img {
+	min-width:100%;
+}
+
+.card .back figure figcaption {
+	position:relative;
+	top: -1.5em;
+	margin-bottom: -1.5em;
+	right:0.3em;
+	float:right;
+	color:#fff;
+	font-style:italic;
+	opacity:0.8;
+	text-shadow: 0 0 3px #013;
+}
+
+.card .back ul {
+	background-color: #e5c700; /* TODO: gradient */
+	font-size: 20px;
+	font-weight: bold; 
+	line-height: 38px;
+	color: #000;
+	padding:0;
+	margin:0;
+	text-shadow: 0 1px 1px #f5f5f5;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+	-webkit-margin-start: 0;
+	-webkit-margin-end: 0;
+	-webkit-padding-start: 0;
+}
+
+.card .back li {
+	list-style-type:none;
+	margin:0;
+	padding:0 0.38em;
+	border-bottom:6px solid #fff;
+	overflow:auto;
+	cursor:pointer;
+}
+
+.card .back li:hover, .card .back li.selected {
+	background-color: #e25a00;
+	color:#fff;
+	text-shadow: 0 1px 1px #320;
+}
+
+.card .back li:last-child {
+	border-bottom:0;
+}
+
+.card .back li .skill {
+	float: left;
+	clear: both;
+}
+
+.card .back li .rating {
+	float: right;
+}
+
+.card.yours {
+	left: 20px;
+	-webkit-transform: rotate(-3deg);
+}
+	
+.card.theirs {
+	top: 10px;
+	right: 20px;
+	-webkit-transform: rotate(4deg);
+}
