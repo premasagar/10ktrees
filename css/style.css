@@ -45,9 +45,13 @@ article.info {
 	margin:1em 1em 0.5em;
 	float:left;
 	clear:both;
-	-webkit-transition: opacity 1s ease-in;
 	opacity:0;
 	color:#000;
+	transition: opacity 1s ease-in;
+	-webkit-transition: opacity 1s ease-in;
+	-moz-transition: opacity 1s ease-in;
+	-o-transition: opacity 1s ease-in;
+	-ms-transition: opacity 1s ease-in;
 }
 article.info.revealed {
 	opacity:1;
@@ -87,33 +91,74 @@ body > footer {
 .card {
 	width: 320px;
 	height: 483px;
-	-webkit-perspective: 1000;
 	float: left;
 	position: absolute;
-	-webkit-transform: translateZ(0);
 	color:#000;
+	perspective: 1000;
+	transform: translateZ(0);
+	-webkit-perspective: 1000;
+	-webkit-transform: translateZ(0);
+	-moz-perspective: 1000;
+	-moz-transform: translateZ(0);
+	-o-perspective: 1000;
+	-o-transform: translateZ(0);
+	-ms-perspective: 1000;
+	-ms-transform: translateZ(0);
 }
 
 .card .card-wrapper {
 	width: 100%;
 	height: 100%;
+	transform-style: preserve-3d;
+	transition: -webkit-transform 0.4s ease;
 	-webkit-transform-style: preserve-3d;
 	-webkit-transition: -webkit-transform 0.4s ease;
+	-moz-transform-style: preserve-3d;
+	-moz-transition: -webkit-transform 0.4s ease;
+	-o-transform-style: preserve-3d;
+	-o-transition: -webkit-transform 0.4s ease;
+	-ms-transform-style: preserve-3d;
+	-ms-transition: -webkit-transform 0.4s ease;
 }
 
 .card:hover .card-wrapper, .card.revealed .card-wrapper {
+	transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
 }
 
 .card .face {
 	position: absolute;
-	-webkit-backface-visibility: hidden;
-	-webkit-border-radius: 30px;
 	background-color: #fff;
-	-webkit-box-shadow: 0 1px 15px #030;
-	-webkit-border-radius: 20px;
 	width: 100%;
 	height: 100%;
+	
+	backface-visibility: hidden;
+	border-radius: 30px;
+	box-shadow: 0 1px 15px #030;
+	border-radius: 20px;
+	
+	-webkit-backface-visibility: hidden;
+	-webkit-border-radius: 30px;
+	-webkit-box-shadow: 0 1px 15px #030;
+	-webkit-border-radius: 20px;
+
+	-moz-backface-visibility: hidden;
+	-moz-border-radius: 30px;
+	-moz-box-shadow: 0 1px 15px #030;
+	-moz-border-radius: 20px;
+	
+	-o-backface-visibility: hidden;
+	-o-border-radius: 30px;
+	-o-box-shadow: 0 1px 15px #030;
+	-o-border-radius: 20px;
+	
+	-ms-backface-visibility: hidden;
+	-ms-border-radius: 30px;
+	-ms-box-shadow: 0 1px 15px #030;
+	-ms-border-radius: 20px;
 }
 
 .card .front {
@@ -138,7 +183,11 @@ body > footer {
 
 .card .back {
 	padding: 10px 10px;
+	transform: rotateY(180deg);
 	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
 }
 
 .card .back h2 {
@@ -153,11 +202,6 @@ body > footer {
 	padding-bottom:10px;
 	width:100%;
 	overflow:auto;
-	-webkit-margin-after: 0;
-	-webkit-margin-before: 0;
-	-webkit-margin-start: 0;
-	-webkit-margin-end: 0;
-	-webkit-padding-start: 0;
 }
 
 .card .back figure .img-wrapper {
@@ -191,11 +235,38 @@ body > footer {
 	padding:0;
 	margin:0;
 	text-shadow: 0 1px 1px #f5f5f5;
-	-webkit-margin-before: 0;
+}
+
+.card .back figure, .card .back ul {
+	margin-after: 0;
+	margin-before: 0;
+	margin-start: 0;
+	margin-end: 0;
+	padding-start: 0;
+	
 	-webkit-margin-after: 0;
+	-webkit-margin-before: 0;
 	-webkit-margin-start: 0;
 	-webkit-margin-end: 0;
 	-webkit-padding-start: 0;
+	
+	-moz-margin-after: 0;
+	-moz-margin-before: 0;
+	-moz-margin-start: 0;
+	-moz-margin-end: 0;
+	-moz-padding-start: 0;
+	
+	-o-margin-after: 0;
+	-o-margin-before: 0;
+	-o-margin-start: 0;
+	-o-margin-end: 0;
+	-o-padding-start: 0;
+	
+	-ms-margin-after: 0;
+	-ms-margin-before: 0;
+	-ms-margin-start: 0;
+	-ms-margin-end: 0;
+	-ms-padding-start: 0;
 }
 
 .card .back li {
@@ -228,11 +299,19 @@ body > footer {
 
 .card.yours {
 	left: 20px;
+	transform: rotate(-3deg);
 	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
 }
 	
 .card.theirs {
 	top: 10px;
 	right: 20px;
+	transform: rotate(4deg);
 	-webkit-transform: rotate(4deg);
+	-moz-transform: rotate(4deg);
+	-o-transform: rotate(4deg);
+	-ms-transform: rotate(4deg);
 }
