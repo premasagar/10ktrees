@@ -1,7 +1,3 @@
-body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, blockquote {
-	margin: 0; padding: 0; border: 0;
-}
-
 body {
 	background: #363;
 	font-family: Helvetica, Arial, Sans-Serif;
@@ -41,6 +37,7 @@ body.intro section.start input, body.intro section.start button {
 
 fieldset#location {
 	display:inline;
+	border:0;
 }
 
 hr {
