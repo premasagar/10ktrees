@@ -4,89 +4,116 @@
 <meta charset="utf-8">
 <title>10K trees</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<link href="css/style.css" rel="stylesheet">
+<link href="css/style.css?v0.2" rel="stylesheet">
 </head>
 
 <body class="intro">
+	<header>
+		<h1><a href="http://10ktrees.com">10K trees</a></h1>
+	</header>
 
-<h1>10K trees</h1>
+	<section class="intro">
+		<p>The <a href="http://london.gov.uk">City of London</a> has planted 10,000 street trees over the last 2 years.
+			<br>
+			The 10,000th was planted on Valentine's Day, 2012.
+		</p>
+	</section>
 
-<hr>
-
-<section class="intro">
-	<p>10,000 street trees have been planted across London.
-		<br>
-		The 10,000th was planted on Valentine's Day, 2012.
-	</p>
-</section>
-
-<section class="start">
-	<label for="location">→ Explore trees near...</label>
-	<fieldset id="location">
-		<input placeholder='e.g. "Tower Hamlets"'>
-	<!--
-		<select>
-			<option value="">...or select an area</option>
-			<option>Caledonian Road - Islington</option>
-			<option>St Helier - Sutton</option>
-			<option>Hounslow- Brentford</option>
-			<option>Hounslow-Feltham</option>
-			<option>Erith - Bexley</option>
-			<option>Hammersmith and Fulham</option>
-			<option>Brent - Neasden</option>
-			<option>Tower hamlets</option>
-			<option>Severn Kings & Goodmayes -Redbridg</option>
-			<option>Yiewsley - Hillingdon</option>
-			<option>Rainham - Havering</option>
-			<option>Forest Gate - Newham</option>
-			<option>Broad Green - Croydon</option>
-			<option>Latchmere - Wandsworth</option>
-			<option>Penge - Bromley</option>
-			<option>Dagenham</option>
-			<option>Barking</option>
-			<option>Haringey East - Haringey</option>
-			<option>Mitcham North - Merton</option>
-			<option>Rush Common - Lambeth</option>
-			<option>Coldharbour - Lambeth</option>
-			<option>Kingston on-Thames - Kingston</option>
-			<option>Borough - Southwark</option>
-			<option>Up&Low Edmonton - Enfield</option>
-			<option>Wealdstone - Harrow</option>
-			<option>Camberwell - Lambeth</option>
-			<option>Borough - in Southwark</option>
-			<option>Northolt South - Ealing</option>
-			<option>Pad & Church St - Westminster</option>
-		</select>
-	-->
-		<button id="btnstart">Go</button>
-	</fieldset>
+	<section class="start">
+		<form id="#start-form">
+			<label for="location">→ Explore trees near...</label>
+			<input id="location" placeholder='e.g. "Tower Hamlets"'>
+			<!--
+				<select>
+					<option value="">...or select an area</option>
+					<option>Caledonian Road - Islington</option>
+					<option>St Helier - Sutton</option>
+					<option>Hounslow- Brentford</option>
+					<option>Hounslow-Feltham</option>
+					<option>Erith - Bexley</option>
+					<option>Hammersmith and Fulham</option>
+					<option>Brent - Neasden</option>
+					<option>Tower hamlets</option>
+					<option>Severn Kings & Goodmayes -Redbridg</option>
+					<option>Yiewsley - Hillingdon</option>
+					<option>Rainham - Havering</option>
+					<option>Forest Gate - Newham</option>
+					<option>Broad Green - Croydon</option>
+					<option>Latchmere - Wandsworth</option>
+					<option>Penge - Bromley</option>
+					<option>Dagenham</option>
+					<option>Barking</option>
+					<option>Haringey East - Haringey</option>
+					<option>Mitcham North - Merton</option>
+					<option>Rush Common - Lambeth</option>
+					<option>Coldharbour - Lambeth</option>
+					<option>Kingston on-Thames - Kingston</option>
+					<option>Borough - Southwark</option>
+					<option>Up&Low Edmonton - Enfield</option>
+					<option>Wealdstone - Harrow</option>
+					<option>Camberwell - Lambeth</option>
+					<option>Borough - in Southwark</option>
+					<option>Northolt South - Ealing</option>
+					<option>Pad & Church St - Westminster</option>
+				</select>
+			-->
+			<button id="btnstart">Go</button>
+		</form>	
+	</section>
 	
-</section>
+	<footer>
+		by <a href="http://twitter.com/premasagar">@premasagar</a> / <a href="http://dharmafly.com" class="df" title="Dharmafly ~ apps for change">Dharmafly</a>
+	</footer>
 
-<hr class="spacey">
+	<hr class="spacey">
 
-<section class="meta">
-	<p><strong>Note:</strong> Currently, this simple concept prototype works only in Google Chrome or Safari browsers.</p>
-	
-	<p>The idea is to connect Londoners with the trees planted in their local neighbourhood, using geo-located street tree data, combined with air quality data. The prototype won top overall prize at the event.</p>
-	
-	<p>It was built by <a href="http://premasagar.com">Premasagar Rose</a> (<a href="http://dharmafly.com">Dharmafly</a>) at a <a href="http://rewiredstate.org">Rewired State</a> hack day for the <a href="http://london.gov.uk">Greater London Authority</a>. The code is available <a href="https://github.com/premasagar/10ktrees">on GitHub</a>.</p>
-</section>
+	<section class="about">
+		<h2>Concept</h2>
+		<p>The idea is to connect Londoners with the trees planted in their local neighbourhood, using geo-located street tree data, combined with air quality data. The prototype won top overall prize at the event.</p>
+		
+		<p>It was built by <a href="http://premasagar.com">Premasagar Rose</a> (<a href="http://dharmafly.com">Dharmafly</a>) at a <a href="http://rewiredstate.org">Rewired State</a> hack day for the <a href="http://london.gov.uk">Greater London Authority</a>.</p>
+		
+		<p>The code is available <a href="https://github.com/premasagar/10ktrees">on GitHub</a>.</p>
+		
+		<p class="warning"><strong>Note:</strong> Currently works only in <a href="http://www.google.com/chrome/">Google Chrome</a> or <a href="http://www.apple.com/safari/">Safari</a> browsers.</p>
+		
+		
+		<h2>Data sources</h2>
+		<ul>
+			<li>
+				Mayor of London's Street Tree Planting programme: <a href="https://docs.google.com/spreadsheet/pub?key=0AvK94puaHj0CdHctS2ItUVEwS0hlZGpYSUVxUVA2N3c&output=html">2008/9</a>, <a href="https://docs.google.com/spreadsheet/pub?key=0AvK94puaHj0CdGtVWkUwUlY5TldlU2dncjRyNTZCM1E&output=html">2009/10</a>, <a href="https://docs.google.com/spreadsheet/pub?key=0AvK94puaHj0CdEsxcDZ6dlhuSTA1aFQ1V2E3NTdNOVE&output=html">2010/11</a>
+			</li>
+			<li>London <a href="https://docs.google.com/present/view?id=dhkppmpp_43f5srtcfp">Green Infrastructure</a></li>
+			<li><a href="http://data.london.gov.uk/search/node/street+trees">'Street trees' data</a> on the <a href="http://data.london.gov.uk">London Datastore</a></li>
+			<li>"Trees & Sustainable Air Quality" - research paper by <a href="http://www.ceh.ac.uk">Centre for Ecology & Hydrology</a> & <a href="http://www.lancaster.ac.uk">Lancaster University</a></li>
+			<li>"Estimation of effectiveness of the most important species for reduction of concentrations of particulates, nitrogen oxides and ozone in the air" - <a href="https://docs.google.com/document/pub?id=1dK-6ta3Xp4MZ1TNGi-lbgr6CYy-l5QQvSrBM0VsqerM">research paper</a></li>
+			<li><a href="http://www.kew.org">Kew Gardens</a></li>
+			<li><a href="https://en.wikipedia.org">Wikipedia</a></li>
+		</ul>
+		
+		
+		<h2>Inspiration</h2>
+		<ul>
+			<li><a href="https://en.wikipedia.org/wiki/Top_Trumps">Top Trumps</a></li>
+			<li><a href="http://line25.com/articles/super-cool-css-flip-effect-with-webkit-animation">Line25</a></li>
+			<li><a href="http://carboncopi.es">CarbonCopi.es</a></li>
+		</ul>
+	</section>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/10ktrees.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/10ktrees.js?v0.2"></script>
 
-<!-- ga -->
-<script>
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-2150808-18']);
-  _gaq.push(['_trackPageview']);
+	<!-- ga -->
+	<script>
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-2150808-18']);
+	  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-</script>
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
 </body>
 </html>

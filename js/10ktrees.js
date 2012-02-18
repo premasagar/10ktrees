@@ -1,42 +1,70 @@
-var states = {
-	intro:{
-		start: function(){
-			jQuery("#btnstart")
-				.click(states.intro.end);
+/*
+	10k trees <http://10ktrees.com>
+	by Premasagar Rose <http://premasagar.com> (Dharmafly <http://dharmafly.com>)
+*/
+
+(function(){
+	"use strict";
+
+	var states = {
+		intro:{
+			start: function(){
+				var next = states.intro.end;
+			
+				jQuery("#btnstart").on("click", next);
+				jQuery("#location").on("change", next);
+				jQuery("#start-form").on("submit", next);
+			},
+			end: function(){
+				window.location = "game.html";
+				return false;
+			}
 		},
-		end: function(){
-			window.location = "game.html";
-		}
-	},
 	
-	round1:{
-		start: function(){
-			setTimeout(function(){
-				jQuery(".yours")
-					.addClass("revealed");
-			}, 500);
+		game:{
+			start: function(){
+				setTimeout(function(){
+					jQuery(".yours").addClass("revealed");
+				}, 500);
 			
-			jQuery(".card.yours ul")
-				.click(states.round1.end);
-		},
+				jQuery(".card.yours ul").one("click", "li", states.game.end);
+			},
 		
-		end: function(){
-			jQuery(".theirs")
-				.addClass("revealed");
+		
+			end: function(){
+				var yours = jQuery(".yours"),
+					theirs = jQuery(".theirs"),
+					yourSkill = jQuery(this),
+					skillTitle = yourSkill.find(".skill").text(),
+					theirSkill = theirs.find(".skill:contains(" + skillTitle + ")").parent(),
+					yourRating = Number(yourSkill.find(".rating").text()),
+					theirRating = Number(theirSkill.find(".rating").text()),
+					instructions = jQuery(".instructions"),
+					win = yourRating > theirRating,
+					draw = yourRating === theirRating;
 				
-			jQuery(".card li.chosen")
-				.addClass("selected");
+					yours.addClass("resolved");
+					theirs.addClass("revealed");
+					yourSkill.addClass("selected");
+					theirSkill.addClass("selected");
+					
+					instructions.text("→ Next round");
+					instructions.click(function(){
+						alert("Only one round exists in this prototype.")
+					});
 				
-			setTimeout(function(){
-				alert("You won!")
-			}, 1000);
-			
+					setTimeout(function(){
+						var verb = win ? "won" : (draw ? "drew" : "lost");
+						alert("You " + verb + " the round!");
+					}, 1000);
+			}
 		}
-	}
-};
+	};
 
-/////
+	/////
 
-var state = jQuery("body").attr("class");
+	var state = jQuery("body").attr("class");
 
-states[state].start();
+	states[state].start();
+	
+}());
