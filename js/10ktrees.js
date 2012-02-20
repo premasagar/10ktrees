@@ -62,9 +62,13 @@
 	};
 
 	/////
-
+    
+    // Preload images
+    jQuery("<img src='images/320px-London_plane_flower.jpg'>");
+	jQuery("<img src='images/320px-Spitz-Ahorn(mbo).JPG'>");
+    jQuery("<img src='images/Greater_london_outline_map_bw.png'>");
+    
+    // Get state and being
 	var state = jQuery("body").attr("class");
-
 	states[state].start();
-	
 }());

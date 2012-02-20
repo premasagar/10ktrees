@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <title>10K trees</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<link href="css/style.css?v0.2" rel="stylesheet">
+<link href="css/style.css?v0.3" rel="stylesheet">
 </head>
 
 <body class="intro">
 	<header>
-		<h1><a href="http://10ktrees.com">10K trees</a></h1>
+		<h1><a href="http://10ktrees.com" title="10ktrees.com">10K trees</a></h1>
 	</header>
 
 	<section class="intro">
@@ -60,14 +60,14 @@
 			<button id="btnstart">Go</button>
 		</form>	
 	</section>
-	
-	<footer>
-		by <a href="http://twitter.com/premasagar">@premasagar</a> / <a href="http://dharmafly.com" class="df" title="Dharmafly ~ apps for change">Dharmafly</a>
-	</footer>
 
 	<hr class="spacey">
 
 	<section class="about">
+		<footer class="credit">
+			by <a href="http://twitter.com/premasagar" title="Premasagar Rose, on Twitter">@premasagar</a> / <a href="http://dharmafly.com" class="df" title="Dharmafly ~ apps for change">Dharmafly</a>
+		</footer>
+	
 		<h2>Warning</h2>
 		<p>Currently only works in <a href="http://www.google.com/chrome/">Google Chrome</a> or <a href="http://www.apple.com/safari/">Safari</a> browsers.</p>
 		
@@ -79,10 +79,10 @@
 		<p>The code is available <a href="https://github.com/premasagar/10ktrees">on GitHub</a>.</p>
 		
 		
-		<h2>Data sources</h2>
+		<h2>Data sources & app structure</h2>
 		<ul>
 			<li>
-				Mayor of London's Street Tree Planting programme: <a href="https://docs.google.com/spreadsheet/pub?key=0AvK94puaHj0CdHctS2ItUVEwS0hlZGpYSUVxUVA2N3c&output=html">2008/9</a>, <a href="https://docs.google.com/spreadsheet/pub?key=0AvK94puaHj0CdGtVWkUwUlY5TldlU2dncjRyNTZCM1E&output=html">2009/10</a>, <a href="https://docs.google.com/spreadsheet/pub?key=0AvK94puaHj0CdEsxcDZ6dlhuSTA1aFQ1V2E3NTdNOVE&output=html">2010/11</a>
+				Mayor of London's Street Tree Planting programme: <a href="https://docs.google.com/spreadsheet/pub?key=0AvK94puaHj0CdHctS2ItUVEwS0hlZGpYSUVxUVA2N3c&amp;output=html">2008/9</a>, <a href="https://docs.google.com/spreadsheet/pub?key=0AvK94puaHj0CdGtVWkUwUlY5TldlU2dncjRyNTZCM1E&amp;output=html">2009/10</a>, <a href="https://docs.google.com/spreadsheet/pub?key=0AvK94puaHj0CdEsxcDZ6dlhuSTA1aFQ1V2E3NTdNOVE&amp;output=html">2010/11</a>
 			</li>
 			<li>London <a href="https://docs.google.com/present/view?id=dhkppmpp_43f5srtcfp">Green Infrastructure</a></li>
 			<li><a href="http://data.london.gov.uk/search/node/street+trees">'Street trees' data</a> on the <a href="http://data.london.gov.uk">London Datastore</a></li>
@@ -90,19 +90,20 @@
 			<li>"Estimation of effectiveness of the most important species for reduction of concentrations of particulates, nitrogen oxides and ozone in the air" - <a href="https://docs.google.com/document/pub?id=1dK-6ta3Xp4MZ1TNGi-lbgr6CYy-l5QQvSrBM0VsqerM">research paper</a></li>
 			<li><a href="http://www.kew.org">Kew Gardens</a></li>
 			<li><a href="https://en.wikipedia.org">Wikipedia</a></li>
+			<li>Data flow: (Google Spreadsheets → CSV) + Google Custom Search(Wikipedia + Kew) → YQL → app → JavaScript + CSS3 transitions</li>            <li>Next stage: an explorer to browse local street trees; full data-driven app</li>
 		</ul>
 		
 		
 		<h2>Inspiration</h2>
 		<ul>
 			<li><a href="https://en.wikipedia.org/wiki/Top_Trumps">Top Trumps</a></li>
-			<li><a href="http://line25.com/articles/super-cool-css-flip-effect-with-webkit-animation">Line25</a></li>
+			<li><a href="http://line25.com/articles/super-cool-css-flip-effect-with-webkit-animation">Line25's CSS3 flip</a></li>
 			<li><a href="http://carboncopi.es">CarbonCopi.es</a></li>
 		</ul>
 	</section>
 
 	<script src="js/jquery.min.js"></script>
-	<script src="js/10ktrees.js?v0.2"></script>
+	<script src="js/10ktrees.js?v0.3"></script>
 
 	<!-- ga -->
 	<script>
