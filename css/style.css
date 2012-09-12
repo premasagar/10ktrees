@@ -203,7 +203,6 @@ body.game .about a:hover {
     transition: -webkit-transform 0.4s ease;
     -webkit-transform-style: preserve-3d;
     -webkit-transition: -webkit-transform 0.4s ease;
-    -moz-transform-style: preserve-3d;
     -moz-transition: -webkit-transform 0.4s ease;
     -o-transform-style: preserve-3d;
     -o-transition: -webkit-transform 0.4s ease;
@@ -214,7 +213,7 @@ body.game .about a:hover {
 .card.revealed .card-wrapper {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
+    /* -moz-transform: rotateY(180deg); */
     -o-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
 }
@@ -274,9 +273,9 @@ body.game .about a:hover {
 }
 
 .card .back {
-    transform: rotateY(180deg);
+    transform: rotate(180deg);
     -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
+    /*-moz-transform: rotate(180deg);*/
     -o-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
 }
@@ -325,10 +324,15 @@ body.game .about a:hover {
     color: #000;
     padding:0;
     margin:0;
+    margin-top: -16px;
     text-shadow: 0 1px 1px #f5f5f5;
 }
 
 .card .back figure, .card .back ul {
+
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
     margin-after: 0;
     margin-before: 0;
     margin-start: 0;
